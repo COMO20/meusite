@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Testemunhos | Comunidade Santa Ágata</title>
+  <style>
+    :root {
+      --color-primary: #845a38;
+      --color-secondary: #e85b01;
+      --color-accent: #ff6605;
+      --color-bg: #e0e0df;
+      --color-text: #b54c0c;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    header {
+      background: var(--color-primary);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffcc99;
+    }
+
+    .btn-doar {
+      background: var(--color-secondary);
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      color: var(--color-primary);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 24px 0 8px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .testemunho {
+      display: flex;
+      align-items: flex-start;
+      background: white;
+      border-left: 5px solid var(--color-secondary);
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      gap: 20px;
+    }
+
+    .foto-perfil {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-secondary);
+    }
+
+    .conteudo-testemunho {
+      flex: 1;
+    }
+
+    .autor {
+      font-style: italic;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: var(--color-primary);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer img {
+      margin: 0 8px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .testemunho {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .conteudo-testemunho {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Comunidade Santa Ágata</div>
+      <ul>
+        <li><a href="index (2).html">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="testemunhos.html" class="active">Testemunhos</a></li>
+        <li><a href="projeto.html">Projeto Social</a></li>
+        <li><a href="vocacional.html">Vocacional</a></li>
+        <li><a href="localizacao.html">Localização</a></li>
+        <li><a href="doacoes.html" class="btn-doar">Doe Agora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h1>Testemunhos</h1>
+    <p>
+      Os testemunhos abaixo revelam o poder transformador do amor de Deus e da missão da Comunidade Santa Ágata. São histórias reais de pessoas alcançadas pela misericórdia e restauradas pela fé.
+    </p>
+
+    <div class="testemunho">
+      <img src="assets/testemunho/joão.avif" alt="João Batista" class="foto-perfil">
+      <div class="conteudo-testemunho">
+        <h2>Uma nova chance de viver</h2>
+        <p>
+          Eu estava completamente perdido nas drogas e achava que não havia mais solução para minha vida. Quando cheguei à Casa de Acolhimento, fui acolhido com amor e paciência. Hoje sou um novo homem, reencontrei minha dignidade e a paz que tanto buscava.
+        </p>
+        <div class="autor">— João Batista</div>
+      </div>
+    </div>
+
+    <div class="testemunho">
+      <img src="assets/testemunho/maria.jpeg" alt="Maria da Luz" class="foto-perfil">
+      <div class="conteudo-testemunho">
+        <h2>O reencontro com Deus</h2>
+        <p>
+          Depois de anos afastada da Igreja, fui tocada em um retiro promovido pela comunidade. A partir dali, nunca mais fui a mesma. Redescobri meu valor como filha de Deus e hoje sou voluntária nas missões. Gratidão eterna!
+        </p>
+        <div class="autor">— Maria da Luz</div>
+      </div>
+    </div>
+
+    <div class="testemunho">
+      <img src="assets/testemunho/familia.jpeg" alt="Família Oliveira" class="foto-perfil">
+      <div class="conteudo-testemunho">
+        <h2>Família restaurada</h2>
+        <p>
+          Nossa família estava destruída pela violência e pelo vício. Graças à oração e acompanhamento dos irmãos da comunidade, fomos curados e restaurados. Hoje somos uma família unida, com Cristo no centro de tudo.
+        </p>
+        <div class="autor">— Família Oliveira</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Comunidade Católica Santa Ágata - Missão dos Apóstolos</h2>
+    <p>"Colocar um sorriso no rosto de quem chora"</p>
+    <div style="margin: 20px 0;">
+      <a href="https://www.instagram.com/comunidadesantaagata_oficial" target="_blank">
+        <img src="assets/icons/instagram.png" alt="Instagram" width="30">
+      </a>
+      <a href="https://wa.me/5599999999999" target="_blank">
+        <img src="assets/icons/whatsapp.png" alt="WhatsApp" width="30">
+      </a>
+      <a href="https://youtube.com/@comunidadesantaagataoficia8953" target="_blank">
+        <img src="assets/icons/youtube.png" alt="YouTube" width="30">
+      </a>
+    </div>
+    <p style="font-size: 14px;">&copy; 2025 Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
