@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Projeto Social | Comunidade Santa Ágata</title>
+  <style>
+    :root {
+      --color-primary: #845a38;
+      --color-secondary: #e85b01;
+      --color-accent: #ff6605;
+      --color-bg: #f2f2f2;
+      --color-text: #4a2f1f;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    header {
+      background: var(--color-primary);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffcc99;
+    }
+
+    .btn-doar {
+      background: var(--color-secondary);
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      color: var(--color-primary);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .quadrodetexto{
+      background: rgba(255, 255, 255, 0.815);
+      border-left: 6px solid var(--color-secondary);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: var(--color-primary);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer img {
+      margin: 0 8px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    .fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-delay-1 { animation-delay: 0.3s; }
+.fade-delay-2 { animation-delay: 0.6s; }
+.fade-delay-3 { animation-delay: 0.9s; }
+.fade-delay-4 { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-acao {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 12px 8px 0 0;
+}
+
+.btn-acao:hover {
+  background-color: var(--color-accent);
+  transform: scale(1.05);
+}
+.btn-acao svg {
+  vertical-align: middle;
+  margin-right: 8px;
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.faixa-fixa-doacao {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-secondary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1100;
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.15);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.faixa-fixa-doacao a {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-left: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.faixa-fixa-doacao a:hover {
+  background-color: #e04c00;
+  transform: scale(1.05);
+}
+
+.faixa-fixa-doacao a svg {
+  margin-right: 8px;
+  fill: white;
+  width: 22px;
+  height: 22px;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Comunidade Santa Ágata</div>
+      <ul>
+        <li><a href="índice.html">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="missoes.html">Missões</a></li>
+        <li><a href="testemunhos.html">Testemunhos</a></li>
+        <li><a href="projeto.html" class="active">Projeto Social</a></li>
+        <li><a href="vocacional.html">Vocacional</a></li>
+        <li><a href="localizacao.html">Localização</a></li>
+        <li><a href="doacoes.html" class="btn-doar">Doe Agora</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+<section class="container">
+  <h1 style="text-align: center; font-size: 2.8rem;" class="fade-in-up">Projeto Social</h1>
+
+  <div class="quadrodetexto fade-in-up fade-delay-1">
+    <p>
+      O <strong>Projeto Social da Comunidade Santa Ágata</strong> é um braço de misericórdia voltado para o acolhimento dos dependentes químicos, pobres e excluídos da sociedade. Nosso objetivo é restaurar vidas através do amor, da oração, do acompanhamento e da reinserção social.
+    </p>
+  </div>
+
+  <h2 style="text-align: center; font-size: 2rem; margin-top: 50px;" class="fade-in-up fade-delay-2">Nossos Pilares de Ação</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 30px;">
+    <div class="quadrodetexto fade-in-up fade-delay-1">
+      <img src="assets/quem somos/quem somos 1.jpg" alt="Acolhimento" style="width: 100%; border-radius: 8px;">
+      <h3 style="margin-top: 15px;">Acolhimento</h3>
+      <p>Recebemos irmãos em situação de vulnerabilidade com carinho, escuta e apoio.</p>
+    </div>
+
+    <div class="quadrodetexto fade-in-up fade-delay-2">
+      <img src="assets/quem somos/quem somos 1.jpg" alt="Evangelização" style="width: 100%; border-radius: 8px;">
+      <h3 style="margin-top: 15px;">Evangelização</h3>
+      <p>Momentos de oração, formações, grupos de apoio e espiritualidade.</p>
+    </div>
+
+    <div class="quadrodetexto fade-in-up fade-delay-3">
+      <img src="assets/quem somos/quem somos 3.jpg" alt="Reabilitação" style="width: 100%; border-radius: 8px;">
+      <h3 style="margin-top: 15px;">Reabilitação</h3>
+      <p>Oferecemos suporte aos dependentes químicos em sua caminhada de libertação e cura.</p>
+    </div>
+
+    <div class="quadrodetexto fade-in-up fade-delay-4">
+      <img src="assets/quem somos/quem somos 1.jpg" alt="Capacitação" style="width: 100%; border-radius: 8px;">
+      <h3 style="margin-top: 15px;">Capacitação</h3>
+      <p>Buscamos reinserir cada acolhido na sociedade com dignidade e propósito.</p>
+    </div>
+  </div>
+
+  <h2 class="fade-in-up fade-delay-1" style="margin-top: 50px;">Transformando realidades</h2>
+  <p class="fade-in-up fade-delay-2">
+    A cada ano, dezenas de vidas são resgatadas do abandono e conduzidas à restauração. A missão é sustentada com a generosidade de benfeitores que acreditam nesse trabalho de compaixão. Nosso lema é claro:
+  </p>
+
+  <div class="quadrodetexto fade-in-up fade-delay-3" style="font-style: italic; font-size: 1.4rem; text-align: center; background: #fff7f2;">
+    "Colocar um sorriso no rosto de quem chora"
+  </div>
+
+  <h2 class="fade-in-up fade-delay-1" style="margin-top: 40px;">Como você pode ajudar?</h2>
+  <p class="fade-in-up fade-delay-2">
+    Você pode colaborar com esse projeto sendo um doador, voluntário ou divulgando nossa missão. Cada gesto de amor faz diferença na vida de quem mais precisa.
+  </p>
+
+  <div class="fade-in-up fade-delay-3">
+  <a href="doacoes.html" class="btn-acao" aria-label="Doe Agora">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    Doe Agora
+  </a>
+  <a href="https://wa.me/5599999999999" target="_blank" class="btn-acao" aria-label="Seja Voluntário">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM6 11c1.66 0 2.99-1.34 2.99-3S7.66 5 6 5 3 6.34 3 8s1.34 3 3 3zm10 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+    Seja Voluntário
+  </a>
+</div>
+</section>
+
+<div class="faixa-fixa-doacao" role="region" aria-label="Faixa fixa de doação">
+  Ajude-nos a transformar vidas! 
+  <a href="doacoes.html" aria-label="Clique para doar agora">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    Doe Agora
+  </a>
+</div>
+
+  <footer>
+    <h2>Comunidade Católica Santa Ágata - Missão dos Apóstolos</h2>
+    <p>"Colocar um sorriso no rosto de quem chora"</p>
+    <div style="margin: 20px 0;">
+      <a href="https://www.instagram.com/comunidadesantaagata_oficial" target="_blank">
+        <img src="assets/icons/instagram.png" alt="Instagram" width="30">
+      </a>
+      <a href="https://wa.me/5599999999999" target="_blank">
+        <img src="assets/icons/whatsapp.png" alt="WhatsApp" width="30">
+      </a>
+      <a href="https://youtube.com/@comunidadesantaagataoficia8953" target="_blank">
+        <img src="assets/icons/youtube.png" alt="YouTube" width="30">
+      </a>
+    </div>
+    <p style="font-size: 14px;">&copy; 2025 Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
