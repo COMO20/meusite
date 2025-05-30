@@ -193,7 +193,7 @@
     <nav>
       <div class="logo">Comunidade Santa Ágata</div>
       <ul>
-        <li><a href="index (2).html">Início</a></li>
+        <li><a href="índice.html">Início</a></li>
         <li><a href="historia.html">História</a></li>
         <li><a href="missoes.html" class="active">Missões</a></li>
         <li><a href="testemunhos.html">Testemunhos</a></li>
@@ -248,7 +248,7 @@
   <h2>Convide-nos para uma Missão</h2>
   <p>Deseja que a Comunidade Santa Ágata leve a missão até sua cidade ou evento? Preencha o formulário abaixo com os detalhes:</p>
 
-  <form action="https://formsubmit.co/seu SEU-EMAIL-AQUI" method="POST" style="max-width: 600px; margin-top: 30px;">
+  <form action="https://formsubmit.co/comunidade.santagata@gmail.com" method="POST" style="max-width: 600px; margin-top: 30px;">
     <!-- Proteções contra spam -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="https://seudominio.com.br/obrigado.html">
@@ -337,3 +337,37 @@
 
 </body>
 </html>
+<!-- Botão de Doação Fixo -->
+<a href="doacoes.html" class="btn-doar-fixo" title="Doe Agora">
+  ❤️
+</a>
+
+<style>
+  .btn-doar-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    background: #e85b01;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-doar-fixo:hover {
+    background: #ff6605;
+    transform: scale(1.1);
+  }
+
+  .btn-doar-fixo:active {
+    transform: scale(0.95);
+  }
+</style>
