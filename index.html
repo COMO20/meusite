@@ -42,52 +42,46 @@
       padding: 60px 0;
     }
 
-    .hero {
-      position: relative;
-      height: 80vh;
-      overflow: hidden;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background-color: #000;
-    }
+   .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .media-slider {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-    }
+.media-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-    .media-slider .slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
+.media-slider .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
 
-    .media-slider .slide.active {
-      opacity: 1;
-      z-index: 1;
-    }
+.media-slider .slide.active {
+  display: block;
+}
 
-    .media-slider img,
-    .media-slider video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.media-slider img,
+.media-slider video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .hero .content {
-      position: relative;
-      z-index: 2;
-      max-width: 300px;
-      padding: 0 20px;
-      padding-top: 60vh; /* botão mais embaixo */
-      margin: 0 auto;
-    }
+.content {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
     .hero button {
       background-color: var(--color-secondary);
