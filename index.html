@@ -268,32 +268,50 @@
   </nav>
 </header>
 
-<section class="hero">
-  <div class="media-slider">
+<section class="hero relative w-full overflow-hidden">
+  <div class="media-slider relative w-full h-screen md:h-[600px]">
     <!-- Slide 1: vídeo -->
-    <div class="slide active">
-      <video src="assets/hero/video/hero1.mp4" muted autoplay loop></video>
+    <div class="slide active absolute inset-0">
+      <video 
+        src="assets/hero/video/hero1.mp4" 
+        muted autoplay loop 
+        class="w-full h-full object-cover"
+      ></video>
     </div>
 
     <!-- Slide 2: imagem -->
-    <div class="slide">
-      <img src="assets/hero/hero1.png" alt="Imagem 1" />
+    <div class="slide absolute inset-0">
+      <img 
+        src="assets/hero/hero1.png" 
+        alt="Imagem 1"
+        class="w-full h-full object-cover"
+      />
     </div>
 
     <!-- Slide 3: imagem -->
-    <div class="slide">
-      <img src="assets/hero/hero2.png" alt="Imagem" />
+    <div class="slide absolute inset-0">
+      <img 
+        src="assets/hero/hero2.png" 
+        alt="Imagem"
+        class="w-full h-full object-cover"
+      />
     </div>
 
-    <!-- Slide 4: video -->
-    <div class="slide">
-      <video src="assets/hero/video/hero2.mp4" muted loop></video>
+    <!-- Slide 4: vídeo -->
+    <div class="slide absolute inset-0">
+      <video 
+        src="assets/hero/video/hero2.mp4" 
+        muted loop 
+        class="w-full h-full object-cover"
+      ></video>
     </div>
   </div>
 
-  <div class="content container">
-  <a href="doacoes.html" class="btn-doar">Quero Doar Agora</a>
-</div>
+  <div class="content container absolute inset-0 flex items-center justify-center">
+    <a href="doacoes.html" class="btn-doar text-white bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg text-lg">
+      Quero Doar Agora
+    </a>
+  </div>
 </section>
 
 <section id="quem-somos" class="container">
