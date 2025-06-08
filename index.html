@@ -42,59 +42,77 @@
       padding: 60px 0;
     }
 
-   .hero {
+  .hero {
   position: relative;
-  width: 100%;
-  height: 100vh;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .media-slider {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
   width: 100%;
-  height: 100%;
 }
 
-.media-slider .slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
+.slide {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.media-slider .slide.active {
+.slide img,
+.slide video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
   display: block;
 }
 
-.media-slider img,
-.media-slider video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.content {
+.content.container {
   position: absolute;
-  z-index: 10;
-  top: 50%;
+  bottom: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  z-index: 2;
   text-align: center;
+  width: 100%;
+  padding: 0 20px;
 }
 
-    .hero button {
-      background-color: var(--color-secondary);
-      border: none;
-      padding: 12px 0;
-      width: 100%;
-      color: white;
-      font-weight: bold;
-      font-size: 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+.btn-doar {
+  background-color: #d32f2f;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .btn-doar {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .slide img,
+  .slide video {
+    object-fit: cover;
+    height: auto;
+  }
+
+  .content.container {
+    bottom: 5%;
+  }
+}
 
     .hero button:hover {
       background-color: var(--color-accent);
@@ -261,50 +279,32 @@
     </ul>
   </nav>
 </header>
-<section class="hero relative w-full overflow-hidden">
-  <div class="media-slider relative w-full h-[100vh] sm:h-[90vh]">
+
+<section class="hero">
+  <div class="media-slider">
     <!-- Slide 1: vídeo -->
-    <div class="slide active absolute inset-0">
-      <video 
-        src="assets/hero/video/hero1.mp4" 
-        muted autoplay loop playsinline
-        class="w-full h-full object-cover"
-      ></video>
+    <div class="slide active">
+      <video src="assets/hero/video/hero1.mp4" muted autoplay loop playsinline></video>
     </div>
 
     <!-- Slide 2: imagem -->
-    <div class="slide absolute inset-0">
-      <img 
-        src="assets/hero/hero1.png" 
-        alt="Imagem 1"
-        class="w-full h-full object-cover"
-      />
+    <div class="slide">
+      <img src="assets/hero/hero1.png" alt="Imagem 1" />
     </div>
 
     <!-- Slide 3: imagem -->
-    <div class="slide absolute inset-0">
-      <img 
-        src="assets/hero/hero2.png" 
-        alt="Imagem"
-        class="w-full h-full object-cover"
-      />
+    <div class="slide">
+      <img src="assets/hero/hero2.png" alt="Imagem" />
     </div>
 
     <!-- Slide 4: vídeo -->
-    <div class="slide absolute inset-0">
-      <video 
-        src="assets/hero/video/hero2.mp4" 
-        muted loop playsinline
-        class="w-full h-full object-cover"
-      ></video>
+    <div class="slide">
+      <video src="assets/hero/video/hero2.mp4" muted loop playsinline></video>
     </div>
   </div>
 
-  <!-- Botão centralizado -->
-  <div class="content absolute top-0 left-0 w-full h-full flex items-center justify-center z-10">
-    <a href="doacoes.html" class="btn-doar text-white bg-orange-600 hover:bg-orange-700 px-6 py-3 rounded-lg text-lg">
-      Quero Doar Agora
-    </a>
+  <div class="content container">
+    <a href="doacoes.html" class="btn-doar">Quero Doar Agora</a>
   </div>
 </section>
 
