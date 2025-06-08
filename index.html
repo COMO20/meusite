@@ -50,10 +50,27 @@
 }
 
 .media-slider {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
+  position: relative;
   width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 
 .slide {
